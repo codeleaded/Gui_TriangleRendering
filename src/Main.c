@@ -48,8 +48,9 @@ void Update(AlxWindow* w){
 	const Vec2 p1 = TransformedView_WorldScreenPos(&tv,triangle.p1);
 	const Vec2 p2 = TransformedView_WorldScreenPos(&tv,triangle.p2);
 	const Vec2 p3 = TransformedView_WorldScreenPos(&tv,triangle.p3);
-	Triangle_RenderX(WINDOW_STD_ARGS,p1,p2,p3,GREEN);
+	
 	Triangle_RenderXWire(WINDOW_STD_ARGS,p1,p2,p3,BLACK,1.0f);
+	Triangle_RenderX(WINDOW_STD_ARGS,p1,p2,p3,GREEN);
 
 	for(int i = 0;i<3;i++){
 		Vec2* p = (Vec2*)(&triangle) + i;
